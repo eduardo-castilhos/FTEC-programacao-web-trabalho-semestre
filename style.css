@@ -4,7 +4,7 @@
 }
 
 body {
-    background: #3B008A;
+    background: linear-gradient(to right, #3B008A, #001f3f);
     display: flex;
     justify-content: center;
     align-items: center;
