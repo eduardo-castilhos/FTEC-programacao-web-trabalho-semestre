@@ -2,3 +2,88 @@
     margin: 0;
     padding: 0;
 }
+
+body {
+    background: #3B008A;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0px 150px;
+    flex-direction: column;
+    gap: 50px;
+}
+
+#container-card-home{
+    display: grid;
+    grid-auto-flow: column;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    gap: 30px;
+}
+
+#container-card-home > div{
+    padding: 25px 15px;
+    border-radius: 20px;
+    height: 250px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+    transition: 0.5s ease;
+    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.3);
+}
+
+#container-card-home > div:hover{
+    transform: scale(1.05);
+    transition: 0.5s ease;
+}
+
+#container-card-home > div > img{
+    width: 100px;
+}
+
+.title-card-home{
+    font-weight: bold;
+    font-size: 21px;
+}
+
+#container-card-home > div:nth-child(1):hover{
+    background-color: #00BFFF;
+}
+
+#container-card-home > div:nth-child(2):hover{
+    background-color: #FFC0CB;
+}
+
+#container-card-home > div:nth-child(3):hover{
+    background-color: #FFD700;
+}
+
+#container-card-home > div:nth-child(4):hover{
+    background-color: #32CD32;
+}
+
+#container-card-home > div:nth-child(5):hover{
+    background-color: #ADD8E6;
+}
+
+#container-card-home > div:nth-child(1){
+    background-color: #029bce;
+}
+
+#container-card-home > div:nth-child(2){
+    background-color: #c7969e;
+}
+
+#container-card-home > div:nth-child(3){
+    background-color: #d1b202;
+}
+
+#container-card-home > div:nth-child(4){
+    background-color: #30b930;
+}
+
+#container-card-home > div:nth-child(5){
+    background-color: #8bafbb;
+}
