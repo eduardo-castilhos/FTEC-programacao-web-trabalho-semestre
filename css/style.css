@@ -7,19 +7,11 @@
 
 body { 
     background: linear-gradient(135deg, #0a0a23 0%, #1a1a3e 25%, #2d1b69 50%, #4a148c 75%, #6a1b9a 100%);
-    background-size: 400% 400%;
-    animation: gradient-shift 15s ease infinite;
     display: flex; 
     justify-content: center; 
     align-items: center; 
     min-height: 100vh;
     overflow-x: hidden;
-}
-
-@keyframes gradient-shift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
 }
 
 .main-container { 
@@ -58,54 +50,20 @@ h1 {
     text-align: center; 
     gap: 15px; 
     transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275); 
-    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4), inset 0 1px 0 rgba(255, 255, 255, 0.1);
-    border: 1px solid rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    position: relative;
-    overflow: hidden;
-    animation-duration: 6s; 
-    animation-timing-function: ease-in-out; 
-    animation-iteration-count: infinite;
-}
-
-#container-card-home > div::before {
-    content: '';
-    position: absolute;
-    top: -50%;
-    left: -50%;
-    width: 200%;
-    height: 200%;
-    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.05), transparent);
-    transform: rotate(45deg);
-    transition: all 0.6s;
-    opacity: 0;
-}
-
-#container-card-home > div:hover::before {
-    animation: shimmer 1.5s ease-in-out;
-    opacity: 1;
-}
-
-@keyframes shimmer {
-    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
 }
 
 #container-card-home > div:hover { 
-    transform: translateY(-15px) scale(1.08); 
-    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.5), 0 0 0 1px rgba(255, 255, 255, 0.2);
-    animation: none;
+    transform: scale(1.08); 
 }
 
 #container-card-home > div > img { 
     width: 110px; 
-    filter: drop-shadow(0 10px 20px rgba(0, 0, 0, 0.3));
-    transition: all 0.3s ease;
+    transition: 0.5s ease;
 }
 
 #container-card-home > div:hover > img {
-    filter: drop-shadow(0 15px 30px rgba(0, 0, 0, 0.4)) brightness(1.1);
-    transform: scale(1.1) rotate(5deg);
+    filter: brightness(1.1);
+    transform: scale(1.3);
 }
 
 .title-card-home { 
@@ -121,7 +79,6 @@ h1 {
 
 #container-card-home > div:nth-child(1) { 
     background: linear-gradient(135deg, #029bce 0%, #0288d1 50%, #0277bd 100%);
-    animation-name: neural-pulse;
 }
 
 #container-card-home > div:nth-child(1):hover { 
@@ -130,8 +87,6 @@ h1 {
 
 #container-card-home > div:nth-child(2) { 
     background: linear-gradient(135deg, #c7969e 0%, #d4a5ae 50%, #e1b4be 100%);
-    animation-name: quantum-float; 
-    animation-delay: 1s;
 }
 
 #container-card-home > div:nth-child(2):hover { 
@@ -140,8 +95,6 @@ h1 {
 
 #container-card-home > div:nth-child(3) { 
     background: linear-gradient(135deg, #d1b202 0%, #dfc30f 50%, #edd51c 100%);
-    animation-name: data-stream; 
-    animation-delay: 2s;
 }
 
 #container-card-home > div:nth-child(3):hover { 
@@ -150,8 +103,6 @@ h1 {
 
 #container-card-home > div:nth-child(4) { 
     background: linear-gradient(135deg, #30b930 0%, #43c043 50%, #56c756 100%);
-    animation-name: ai-breathe; 
-    animation-delay: 3s;
 }
 
 #container-card-home > div:nth-child(4):hover { 
@@ -160,64 +111,10 @@ h1 {
 
 #container-card-home > div:nth-child(5) { 
     background: linear-gradient(135deg, #8bafbb 0%, #9cb9c5 50%, #adc3cf 100%);
-    animation-name: neural-pulse; 
-    animation-delay: 4s;
 }
 
 #container-card-home > div:nth-child(5):hover { 
     background: linear-gradient(135deg, #ADD8E6 0%, #b8dde8 50%, #c3e2ea 100%);
-}
-
-@keyframes neural-pulse {
-    0%, 100% { 
-        transform: translateY(0) scale(1);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.4);
-    }
-    50% { 
-        transform: translateY(-8px) scale(1.02);
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    }
-}
-
-@keyframes quantum-float {
-    0%, 100% { 
-        transform: translate(0, 0) rotate(0deg);
-    }
-    25% { 
-        transform: translate(5px, -8px) rotate(1deg);
-    }
-    50% { 
-        transform: translate(-3px, -12px) rotate(-0.5deg);
-    }
-    75% { 
-        transform: translate(-8px, -6px) rotate(1.5deg);
-    }
-}
-
-@keyframes data-stream {
-    0%, 100% { 
-        transform: translateX(0) scaleX(1);
-    }
-    25% { 
-        transform: translateX(8px) scaleX(1.01);
-    }
-    50% { 
-        transform: translateX(-5px) scaleX(0.99);
-    }
-    75% { 
-        transform: translateX(12px) scaleX(1.02);
-    }
-}
-
-@keyframes ai-breathe {
-    0%, 100% { 
-        transform: scale(1);
-        filter: brightness(1);
-    }
-    50% { 
-        transform: scale(1.03);
-        filter: brightness(1.05);
-    }
 }
 
 @media (max-width: 1200px) { 
