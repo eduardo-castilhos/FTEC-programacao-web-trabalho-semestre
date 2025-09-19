@@ -117,6 +117,58 @@ h1 {
     background: linear-gradient(135deg, #ADD8E6 0%, #b8dde8 50%, #c3e2ea 100%);
 }
 
+.container-definicao{
+    border-radius: 20px;
+    border: 1px solid rgb(182, 182, 182);
+    padding: 15px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    background-color: rgba(128, 128, 128, 0.171);
+    box-shadow: 0 10px 15px rgba(255, 255, 255, 0.2);
+    width: 100%;
+    text-align: justify;
+}
+
+.mb20{
+    margin-bottom: 20px;
+}
+
+.container-listagem{
+    width: 100%;
+}
+
+.container-listagem-itens{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+.container-listagem-line{
+    background-color: #002fff13;
+    display: flex;
+    gap: 30px;
+    justify-content: center;
+    padding: 50px 30px;
+    border-radius: 25px;
+    border: 1px solid rgb(126, 126, 126);
+    box-shadow: 0 2px 15px rgba(255, 255, 255, 0.2);
+}
+
+.container-listagem-line-reverse{
+    flex-direction: row-reverse;
+    justify-content: center;
+}
+
+.container-listagem-line > img{
+    height: 130px;
+    transition: 0.2s ease-in-out;
+}
+
+.container-listagem-line:hover > img{
+    transform: scale(1.2);
+}
+
 @media (max-width: 1200px) { 
     .main-container { 
         padding: 20px 50px; 
