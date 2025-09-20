@@ -119,12 +119,12 @@ h1 {
 
 .container-definicao{
     border-radius: 20px;
-    border: 1px solid rgb(182, 182, 182);
-    padding: 15px;
+    border: 1px solid rgb(126, 126, 126);
+    padding: 20px;
     display: flex;
     flex-direction: column;
     gap: 10px;
-    background-color: rgba(128, 128, 128, 0.171);
+    background-color: #002fff13;
     box-shadow: 0 10px 15px rgba(255, 255, 255, 0.2);
     width: 100%;
     text-align: justify;
@@ -147,6 +147,7 @@ h1 {
 .container-listagem-line{
     background-color: #002fff13;
     display: flex;
+    flex-direction: column;
     gap: 30px;
     justify-content: center;
     padding: 50px 30px;
@@ -160,13 +161,50 @@ h1 {
     justify-content: center;
 }
 
-.container-listagem-line > img{
-    height: 130px;
+.container-listagem-line-header{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 25px;
+}
+
+.container-listagem-line-header > img{
+    height: 60px;
     transition: 0.2s ease-in-out;
 }
 
-.container-listagem-line:hover > img{
-    transform: scale(1.2);
+.container-listagem-line:hover > div > img{
+    transform: scale(1.1);
+}
+
+.container-listagem-line-itens{
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    padding-left: 50px;
+}
+
+.container-listagem-line-itens > div{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+.container-listagem-line-itens > div > div{
+    padding-left: 10px;
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.container-listagem-line-itens-image-text{
+    height: 20px;
+}
+
+.listagem-line-separador{
+    height: 8px;
+    background-color: rgba(255, 255, 255, 0.123);
+    border-radius: 50px;
 }
 
 @media (max-width: 1200px) { 
