@@ -17,7 +17,7 @@ cardHome3.addEventListener('click', () => {
 });
 
 cardHome4.addEventListener('click', () => {
-    window.location.href = 'conteudos-coticias.html'
+    window.location.href = 'conteudos-noticias.html'
 });
 
 cardHome5.addEventListener('click', () => {
